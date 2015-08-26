@@ -1,3 +1,29 @@
+window.onload = function()
+{
+var sections = document.getElementsByClassName("content_section");
+for(var i=0; i<sections.length;i++)
+	{
+		sections[i].style.height=document.documentElement.clientHeight+"px";
+	}
+
+//document.addEventListener("DOMMouseScroll",scrollFunc,false);
+//document.addEventListener("mousewheel",scrollFunc,false);
+}
+
+
+var scrollFunc = function(e)
+{
+var sectionHeight = document.getElementsByClassName("content_section")[0].style.height;
+var headerHeight = document.getElementById("header_wrap").offsetHeight;
+var footerHeight = document.getElementById("footer_wrap").offsetHeight;
+
+var scrollDistance = document.body.scrollTop || document.documentElement.scrollTop;
+if(scrollDistance == 0 && e.wheelDelta<0)
+{
+	document.body.scrollTop = headerHeight;
+	//document.body.scrollTop = 100;
+}
+}
 function showTitle(mask)
 {
 mask.children[0].style.display="block";

@@ -1,300 +1,226 @@
+<!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="css/main.css"/>
-<link rel="stylesheet" type="text/css" href="css/animation.css">
-<script type="text/javascript" src="js/1.js"></script>
-<script type="text/javascript" src="js/pageTrans.js"></script>
-<title>My website</title>
-</head>
-<body >
-<div id="navi" onmouseleave="hideNavi()" >
 
-	<div id="navi_hd" >
-		<div id="navi_bg" >
-		</div>
-		<div id="navi_logo" onclick="goDown(currentDis(),'home')">
-		</div>
-		<div id="navi_buttons">
-			<div class="navi_button" id="navi_about">
-				<div class="navi_mask" onmouseover="showTitle(this)" onmouseout="hideTitle(this)" onclick="switchPage('about_1')">	
-					<h1 style="margin-left:5px">About</h1>	
-				</div>
-			</div>
-			<div class="navi_button" id="navi_work">
-				<div class="navi_mask" onmouseover="showTitle(this)" onmouseout="hideTitle(this)" onclick="switchPage('work_1')">	
-					<h1 style="margin-left:5px">Work</h1>	
-				</div>
-			</div>
-			<div class="navi_button" id="navi_break">
-				<div class="navi_mask" onmouseover="showTitle(this)" onmouseout="hideTitle(this)" onclick="switchPage('break_1')">	
-					<h1 style="margin-left:5px">Break</h1>	
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="drop_down_div">
-		<div id="drop_down"  onmouseover="showNavi()">
-		</div>
-	</div>
-</div>
-<!--The round label on the right side-->
-<div id="page_sign_div">
-	<div id="sign_1" class="page_sign" onclick="goBack(currentDis()+'_2',currentDis()+'_1')">
-	</div>
-	<div id="sign_2" class="page_sign" onclick="goFoward(currentDis()+'_1',currentDis()+'_2')">
-	</div>
-</div>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="KarlBao.GitHub.com : Bao Jiwei&#39;s personal page">
 
-<div class="home_page" id="home" style="display:block">
-	<div class="content_wrap ">
-		<div id="logo_bar">
-			<div>
-			</div>
-		</div>
-		<div id="circle_bar">
-			
-			<div class="circle" id="icon1_div" style="margin-left:20px;">
-				<div class="mask" onmouseover="showTitle(this)" onmouseout="hideTitle(this)" onclick="nextPage('home','about_1')">	
-						<h1 style="margin-left:20px">About</h1>	
-				</div>
-				<div class="circle_text" style="position:absolute">	
-				</div>
-			</div>
-			
-			<div class="circle" id="icon2_div" style="margin-left:116px;margin-right:116px;">
-					<div class="mask" onmouseover="showTitle(this)" onmouseout="hideTitle(this)" onclick="nextPage('home','work_1')">	
-							<h1 style="margin-left:20px">Work</h1>	
-					</div>
-					<div class="circle_text" style="position:absolute">	
-					</div>
-			</div>
-			<div class="circle" id="icon3_div" style="margin-right:20px;">
-					<div class="mask" onmouseover="showTitle(this)" onmouseout="hideTitle(this)" onclick="nextPage('home','break_1')">	
-							<h1 style="margin-left:20px">Break</h1>	
-					</div>
-					<div class="circle_text" style="position:absolute">	
-					</div>
-			</div>
-		</div>
-	</div>
-</div>
-	
-<div class="pt_page" id="about_1">
-	
-	<div class="content_wrap">
-		<div style="height:500px;">
-			<div id="about_me_text">
-				<p>Hi, here!</p>
-				<p>I am a student from ECUST, l'm looking for an internship of frontend developer.
-				<a href="http://www.facebook.com"><img class="link_img" src="image/facebook.png"/></a>
-				<a href="http://www.twitter.com"><img class="link_img" src="image/twitter.png"/></a>
-				<a href="http://www.flickr.com"><img class="link_img" src="image/flickr.png"/></a>
-				</p>
-			</div>
-			<div id="about_me_image">
-				<img src="image/about_1.png" />
-			</div>
-		</div>
-		<!--
-		<div class="next_icon_div">
-			<div class="next_icon" style="background-image:url('image/next_icon_green.png')">
-			</div>
-		</div>
-		-->
-	</div>
-	
-	<div class="pullUp" onclick="goFoward('about_1','about_2')">
-		<div class="pullUp_tri" style="background-image:url('image/pull_up.png');">
-		</div>
-		<div class="bottom_bar" style="background-color:d5ffa8;">
-		</div>
-	</div>
-</div>
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-<div class="pt_page" id="about_2" style="background-color:#D5FFA8;">
-	
-	<div class="content_wrap" style="padding-top:100px;">
-		<div id="about_me">
-			<span class="about_me_title" style="margin:0px 0 0 70px;top:10px;">Personality</span>
-			<span class="about_me_title" style="margin:0px 0 0 780px;top:10px;">Work</span>
-			<span class="about_me_words" style="margin:10px 0 0 0px">Outgoing</span>
-			<span class="about_me_words" style="margin:10px 0 0 890px">Team-player</span>
-			<span class="about_me_words" style="margin:220px 0 0 0px">Rigorous</span>
-			<span class="about_me_words" style="margin:220px 0 0 890px">Self-management</span>
-			<span class="about_me_words" style="margin:440px 0 0 0px">Rational</span>
-			<span class="about_me_words" style="margin:440px 0 0 890px">Hardworking</span>
-		</div>
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/custom.css">
 
-	</div>
-</div>
+    <script type="text/javascript" src="javascripts/custom.js"></script>
+    <title>KarlBao.GitHub.com</title>
+  </head>
 
-<div class="pt_page" id="work_1">
-	<!--
-	<div id="wave_div" onclick="goFoward('work_1','work_2')">
-		<div id="shark_div">
-			<div id="shark">
-			</div>
-		</div>
-		<div id="wave">
-		</div>
-	</div>
-	-->
-	<div class="content_wrap" style="padding-right:30px;">
-		<div id="work_text">
-			<p>I have focused on both IT and EE for 3 years and have two working experience to put <span id="work_text_focus" onclick="goFoward('work_1','work_2')">my professional skills</span> into practice.</p>
-		</div>
-		<div id="work1_image">
-		</div>
-	</div>
-	<div class="pullUp" onclick="goFoward('work_1','work_2')">
-		<div class="pullUp_tri" style="background-image:url('image/pull_up_work.png')">
-		</div>
-		<div class="bottom_bar" style="background-color:#c7f0f0">
-		</div>
-	</div>
-</div>
+  <body>
 
-<div class="pt_page" id="work_2">
-	
-	<div id="work_2_bg">
-	</div>
-		<div class="content_wrap">
-		<div id="skill_detail_div" style="padding-top:100px;">
-			<div class="skill_detail" id="skillTitle" style="display:block;font-size:3em;">
-				<p>My professional skills</p>
-			</div>
-			<div class="skill_detail" id="JavaDetail">
-				<p>I have learned Java for about 10 months, and I am able to do GUI, RMI, TCP, UDP, multi-thread, etc. </p>
-			</div>
-			<div class="skill_detail" id="HTMLDetail">
-				<p>I can use HTML well and have the experience to develop the website in a company for about 3 months. </p>
-			</div>
-			<div class="skill_detail" id="CSSDetail">
-				<p>I can use CSS as well as CSS3 and have the 3-month experience to develop the website in a company. </p>
-			</div>
-			<div class="skill_detail" id="JavaScriptDetail">
-				<p>I can use JavaScript and jQuery to create the interaction between the user and the website. </p>
-			</div>
-			<div class="skill_detail" id="PHPDetail">
-				<p>I have some knowledge about PHP and Smarty and also have the experience to apply it during the internship. </p>
-			</div>
-			<div class="skill_detail" id="SQLDetail">
-				<p>I can well organize and operate the data in mySQL directly or via PHP and use them in the website. </p>
-			</div>
-		</div>
-		<div id="skill_bar">
-			
-			<div id="skill_bar_border">
-			</div>
-			<div class="skill">
-				<div class="skill_blank">
-				</div>
-				<div class="color_block" style="background-color:#FF6767" onmouseover="showSkill(this,'Java')" onmouseout="hideSkill(this,'Java')">
-				</div>
-				<div class="skill_text">
-					<div>
-						<p id="Java">Java</p>
-					</div>
-				</div>
-			</div>
-			
-			<div class="skill">
-					<div class="skill_text">
-						<div>
-							<p id="HTML">HTML</p>
-						</div>
-					</div>
-				<div class="color_block" style="background-color:#FF9867" onmouseover="showSkill(this,'HTML')" onmouseout="hideSkill(this,'HTML')">
-				</div>
-				<div class="skill_blank">
-				</div>
-			</div>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/KarlBao">View on GitHub</a>
 
-			<div class="skill">
-				<div class="skill_blank">
-				</div>
-				<div class="color_block" style="background-color:#FFD467" onmouseover="showSkill(this,'CSS')" onmouseout="hideSkill(this,'CSS')">
-				</div>
-				<div class="skill_text">
-					<p id="CSS" style="margin-left:50px;">CSS</p>
-				</div>
-			</div>
-			
-			<div class="skill">
-				<div class="skill_text">
-					<p id="JavaScript"style="margin-left:15px;">JavaScript</p>
-				</div>
-				<div class="color_block" style="background-color:#F4FF79" onmouseover="showSkill(this,'JavaScript')" onmouseout="hideSkill(this,'JavaScript')">
-				</div>
-				<div class="skill_blank">
-				</div>
-			</div>
-			
-			<div class="skill">
-				<div class="skill_blank">
-				</div>
-				<div class="color_block" style="background-color:#CEFF67" onmouseover="showSkill(this,'PHP')" onmouseout="hideSkill(this,'PHP')">
-				</div>
-				<div class="skill_text">
-					<p id="PHP" style="margin-left:50px;">PHP</p>
-				</div>
-			</div>
-			
-			<div class="skill">
-				<div class="skill_text">
-					<p id="SQL" style="margin-left:50px;">SQL</p>
-				</div>
-				<div class="color_block" style="background-color:#92FF67" onmouseover="showSkill(this,'SQL')" onmouseout="hideSkill(this,'SQL')">
-				</div>
-				<div class="skill_blank">
-				</div>
-			</div>
-			
-		</div>
+          <h1 id="project_title">KarlBao.GitHub.com</h1>
+          <h2 id="project_tagline">Bao Jiwei&#39;s personal page</h2>
 
-	</div>
+        </header>
+    </div>
 
-</div>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <!-- ABOUT_1 -->
+      <div class="content_section">
+        <div class="content_wrap">
+            <div id="about_me_text">
+              <p>Hi, here!</p>
+              <p>I am a graduate from ECUST and FH-Luebeck, looking for a work of frontend development.
+              <a href="http://www.facebook.com"><img class="link_img" src="image/facebook.png"/></a>
+              <a href="http://www.twitter.com"><img class="link_img" src="image/twitter.png"/></a>
+              <a href="http://www.flickr.com"><img class="link_img" src="image/flickr.png"/></a>
+              </p>
+            </div>
+            <div id="about_me_image">
+              <img src="image/about_1.png" />
+            </div>
+          
+          <!--
+          <div class="next_icon_div">
+            <div class="next_icon" style="background-image:url('image/next_icon_green.png')">
+            </div>
+          </div>
+          -->
+        </div>
+      </div>
+      <!-- ABOUT_2 -->
+      <div class="content_section">
+        <div class="content_wrap">
+          <div id="about_me">
+            <!--
+            <span class="about_me_title" style="margin:0px 0 0 70px;top:10px;">Personality</span>
+            <span class="about_me_title" style="margin:0px 0 0 780px;top:10px;">Work</span>
+            -->
+            <span class="about_me_words" style="margin:10px 0 0 0px">Outgoing</span>
+            <span class="about_me_words" style="margin:10px 0 0 890px">Team-player</span>
+            <span class="about_me_words" style="margin:220px 0 0 0px">Rigorous</span>
+            <span class="about_me_words" style="margin:220px 0 0 890px">Self-management</span>
+            <span class="about_me_words" style="margin:440px 0 0 0px">Rational</span>
+            <span class="about_me_words" style="margin:440px 0 0 890px">Hardworking</span>
+          </div>
+        </div>
+      </div>
+      <!-- WORK_1 -->
+      <div class="content_section">
+        <div class="content_wrap">
+          <div id="work_text">
+            <p>I have focused on both IT and EE for 3 years and have two working experience to put <span id="work_text_focus" onclick="goFoward('work_1','work_2')">my professional skills</span> into practice.</p>
+          </div>
+          <div id="work1_image">
+          </div>
+        </div>
+      </div>
+      <!-- WORK_2 -->
+      <div class="content_section">
+        <div class="content_wrap">
+          <div>
+            <div id="skill_detail_div">
+              <div class="skill_detail" id="skillTitle" style="display:block;font-size:3em;">
+                <p>My professional skills</p>
+              </div>
+              <div class="skill_detail" id="JavaDetail">
+                <p>I have learned Java for about 10 months, and I am able to do GUI, RMI, TCP, UDP, multi-thread, etc. </p>
+              </div>
+              <div class="skill_detail" id="HTMLDetail">
+                <p>I can use HTML well and have the experience to develop the website in a company for about 3 months. </p>
+              </div>
+              <div class="skill_detail" id="CSSDetail">
+                <p>I can use CSS as well as CSS3 and have the 3-month experience to develop the website in a company. </p>
+              </div>
+              <div class="skill_detail" id="JavaScriptDetail">
+                <p>I can use JavaScript and jQuery to create the interaction between the user and the website. </p>
+              </div>
+              <div class="skill_detail" id="PHPDetail">
+                <p>I have some knowledge about PHP and Smarty and also have the experience to apply it during the internship. </p>
+              </div>
+              <div class="skill_detail" id="SQLDetail">
+                <p>I can well organize and operate the data in mySQL directly or via PHP and use them in the website. </p>
+              </div>
+            </div>
+            <div id="skill_bar">
+              
+              <div id="skill_bar_border">
+              </div>
+              <div class="skill">
+                <div class="skill_blank">
+                </div>
+                <div class="color_block" style="background-color:#FF6767" onmouseover="showSkill(this,'Java')" onmouseout="hideSkill(this,'Java')">
+                </div>
+                <div class="skill_text">
+                  <div>
+                    <p id="Java">Java</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="skill">
+                  <div class="skill_text">
+                    <div>
+                      <p id="HTML">HTML</p>
+                    </div>
+                  </div>
+                <div class="color_block" style="background-color:#FF9867" onmouseover="showSkill(this,'HTML')" onmouseout="hideSkill(this,'HTML')">
+                </div>
+                <div class="skill_blank">
+                </div>
+              </div>
 
-<div class="pt_page" id="break_1" >
-	
-	<div class="content_wrap" style="padding-right:30px;">
-		<div id="work_text">
-			<p>I am interested in learning the new knowledge and having a chat with others during the break time.</p>
-		</div>
-		<div id="break1_image">
-		</div>
-	</div>
-	<div class="pullUp" onclick="goFoward('break_1','break_2')">
-		<div class="pullUp_tri" style="background-image:url('image/pull_up_break.png')">
-		</div>
-		<div class="bottom_bar" style="background-color:c1ffbb">
-		</div>
-	</div>
-</div>
+              <div class="skill">
+                <div class="skill_blank">
+                </div>
+                <div class="color_block" style="background-color:#FFD467" onmouseover="showSkill(this,'CSS')" onmouseout="hideSkill(this,'CSS')">
+                </div>
+                <div class="skill_text">
+                  <p id="CSS" style="margin-left:50px;">CSS</p>
+                </div>
+              </div>
+              
+              <div class="skill">
+                <div class="skill_text">
+                  <p id="JavaScript"style="margin-left:15px;">JavaScript</p>
+                </div>
+                <div class="color_block" style="background-color:#F4FF79" onmouseover="showSkill(this,'JavaScript')" onmouseout="hideSkill(this,'JavaScript')">
+                </div>
+                <div class="skill_blank">
+                </div>
+              </div>
+              
+              <div class="skill">
+                <div class="skill_blank">
+                </div>
+                <div class="color_block" style="background-color:#CEFF67" onmouseover="showSkill(this,'PHP')" onmouseout="hideSkill(this,'PHP')">
+                </div>
+                <div class="skill_text">
+                  <p id="PHP" style="margin-left:50px;">PHP</p>
+                </div>
+              </div>
+              
+              <div class="skill">
+                <div class="skill_text">
+                  <p id="SQL" style="margin-left:50px;">SQL</p>
+                </div>
+                <div class="color_block" style="background-color:#92FF67" onmouseover="showSkill(this,'SQL')" onmouseout="hideSkill(this,'SQL')">
+                </div>
+                <div class="skill_blank">
+                </div>
+              </div>   
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BREAK_1 -->
+      <div class="content_section">
+        <div class="content_wrap">
+          <div id="work_text">
+            <p>I am interested in learning the new knowledge and having a chat with others during the break time.</p>
+          </div>
+          <div id="break1_image">
+          </div>
+        </div>
+      </div>
+      <!-- BREAK_2 -->
+      <div class="content_section">
+        <div class="content_wrap" style="padding-right:30px;">
+          <div id="break_div">
+            <div class="break_detail">
+              <img src="image/break_1.png">
+              <span style="margin-left:50px;">Music</span>
+            </div>
+            <div class="break_detail">
+              <img src="image/break_2.png">
+              <span style="margin-left:50px;">Chat<span>
+            </div>
+            <div class="break_detail">
+              <img src="image/break_3.png">
+              <span style="margin-left:10px;">Learning<span>
+            </div>
+            <div class="break_detail">
+              <img src="image/break_4.png">
+              <span style="margin-left:50px;">Games<span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="height:1px;width:100%"></div>  
+    </div><!-- MAIN end -->
 
-<div class="pt_page" id="break_2" style="background-color:c1ffbb">
-	
-	<div class="content_wrap" style="padding-right:30px;">
-		<div id="break_div">
-			<div class="break_detail">
-				<img src="image/break_1.png">
-				<span style="margin-left:50px;">Music</span>
-			</div>
-			<div class="break_detail">
-				<img src="image/break_2.png">
-				<span style="margin-left:50px;">Chat<span>
-			</div>
-			<div class="break_detail">
-				<img src="image/break_3.png">
-				<span style="margin-left:10px;">Learning<span>
-			</div>
-			<div class="break_detail">
-				<img src="image/break_4.png">
-				<span style="margin-left:50px;">Games<span>
-			</div>
-		</div>
-	</div>
-</div>
-</body>
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
 </html>
